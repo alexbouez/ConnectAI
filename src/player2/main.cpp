@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
-#include <stdio.h>
 
-// Compile as shared object with cc
+#include "main.h"
+
+// Compile as shared object with g++
 
 /** 
  * Squaring of small number.
@@ -11,6 +12,7 @@
  * @param i a small number (int)
  * @return n the square root of i
  */
-int square(int i) {
-	return i * i;
+extern "C" int play(void) {
+	Board board;
+    return board.get_rows();
 }
